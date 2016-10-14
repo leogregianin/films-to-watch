@@ -6,7 +6,7 @@ main_page_head = '''
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta charset="UTF-8"> 
     <title>Filmes para assistir</title>
 
     <!-- Bootstrap 3 -->
