@@ -1,6 +1,5 @@
 # films-to-watch
 
-## Gerar site
 ```bash
 python .\entertainment_center.py
 ```
