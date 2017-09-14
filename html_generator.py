@@ -4,9 +4,10 @@ import re
 
 main_page_head = '''
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Filmes para assistir</title>
 
     <!-- Bootstrap 3 -->
@@ -132,8 +133,7 @@ def create_movie_tiles_content(movies):
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
         youtube_id_match = youtube_id_match or re.search(
             r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
-        trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
-                              else None)
+        trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match else None)
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
