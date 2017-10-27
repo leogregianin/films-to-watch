@@ -1,0 +1,25 @@
+{
+    "films": [
+      {
+        "key": "sal_terra",
+        "title": "O Sal da Terra",
+        "storyline": "O fotógrafo brasileiro Sebastião Salgado viaja a 40 anos através dos continentes aos passos de uma humanidade sempre em mutação. O filme retrata esta história. Uma homenagem à beleza do planeta",
+        "poster_image_url": "https://raw.githubusercontent.com/leogregianin/films-to-watch/master/poster/sal-terra.jpg?token=ABmyVfW2WjKPjsbPX0gzarr7PhCRqShOks5YCXskwA%3D%3D",
+        "trailer_youtube_url": "https://www.youtube.com/watch?v=dT7wv2HSkYE"
+      },
+      {
+        "key": "ensaio_cegueira",
+        "title": "Ensaio sobre a Cegueira",
+        "storyline": "Filme baseado no livro de mesmo nome do autor português José Saramago",
+        "poster_image_url": "https://raw.githubusercontent.com/leogregianin/films-to-watch/master/poster/cegueira.jpg?token=ABmyVeck95D7CCf0QaDT4emLTdUV7Dqrks5YCXsLwA%3D%3D",
+        "trailer_youtube_url": "https://www.youtube.com/watch?v=AyYZA7bLsYA"
+      },
+      {
+        "key": "sobral_pinto",
+        "title": "Sobral: O Homem que não tinha Preço",
+        "storyline": "Documentário sobre a história da vida de um dos mais emblemáticos advogados brasileiros Sobral Pinto",
+        "poster_image_url": "https://raw.githubusercontent.com/leogregianin/films-to-watch/master/poster/sobral.jpg?token=ABmyVUEXEplYDtxUzYsl6pYk2kQEey5uks5YCXs4wA%3D%3D",
+        "trailer_youtube_url": "https://www.youtube.com/watch?v=xvU4NGJ7CMk"
+      }
+    ]
+  }
