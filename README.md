@@ -1,7 +1,5 @@
 # films-to-watch
 
-```bash
-python .\entertainment_center.py
-```
+Run ```python .\app.py``` to monitoring changes in ```films.json```.
 
-https://leogregianin.github.io/films-to-watch/
+Insert, update or delete films in ```films.json```
