@@ -1,10 +1,17 @@
+import os, sys
 import media
 import html_generator
 import json
 
+__file__ = 'films.json'
+
 def generator():
+
+	if not os.path.isfile(__file__):
+		print("File %s not exist. Exit." % __file__)
+		sys.exit(1)
 	
-	data = json.load(open('films.json'))
+	data = json.load(open(__file__))
 	movies = []
 
 	for i in range(len(data["films"])):

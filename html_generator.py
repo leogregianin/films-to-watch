@@ -1,6 +1,7 @@
 import os
 import re
 
+# js file
 js_functions = '''
 // Pause the video when the modal is closed
 $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
@@ -29,37 +30,45 @@ $(document).ready(function () {
 });
 '''
 
+# css file generator
 css_style = '''
 body {
 	padding-top: 80px;
 }
+
 #trailer .modal-dialog {
 	margin-top: 200px;
 	width: 640px;
 	height: 480px;
 }
+
 .hanging-close {
 	position: absolute;
 	top: -12px;
 	right: -12px;
 	z-index: 9001;
 }
+
 #trailer-video {
 	width: 100%;
 	height: 100%;
 }
+
 .movie-tile {
 	margin-bottom: 20px;
 	padding-top: 20px;
 }
+
 .movie-tile:hover {
 	background-color: #EEE;
 	cursor: pointer;
 }
+
 .scale-media {
 	padding-bottom: 56.25%;
 	position: relative;
 }
+
 .scale-media iframe {
 	border: none;
 	height: 100%;
@@ -69,12 +78,14 @@ body {
 	top: 0;
 	background-color: white;
 }
+
 .footer, .push {
   height: 155px;
 	background-color: #EEE;
 }
 '''
 
+# html file generator
 main_page_head = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +93,6 @@ main_page_head = '''
     <meta http-equiv="X-UA-Compatible" content="chrome=1" charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Films to watch</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -105,7 +115,6 @@ main_page_content = '''
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -134,6 +143,7 @@ movie_tile_content = u'''
     <h5>{movie_storyline}</h5>
 </div>
 '''
+
 
 def create_movie_tiles_content(movies):
     content = ''
