@@ -38,8 +38,7 @@ body {
 	top: 0;
 	background-color: white;
 }
-
 .footer, .push {
-    height: 155px;
+  height: 155px;
 	background-color: #EEE;
 }

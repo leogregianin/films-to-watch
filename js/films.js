@@ -5,6 +5,7 @@ $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (eve
     // reliable way to ensure the video stops playing in IE
     $("#trailer-video-container").empty();
 });
+
 // Start playing the video whenever the trailer modal is opened
 $(document).on('click', '.movie-tile', function (event) {
     var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
@@ -16,6 +17,7 @@ $(document).on('click', '.movie-tile', function (event) {
       'frameborder': 0
     }));
 });
+
 // Animate in the movies when the page loads
 $(document).ready(function () {
   $('.movie-tile').hide().first().show("fast", function showNext() {

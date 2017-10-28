@@ -1,4 +1,5 @@
-import os, time, sys, fnmatch
+import os, time, sys
+import fnmatch
 import webbrowser
 
 def find_json_file():

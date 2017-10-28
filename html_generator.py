@@ -8,6 +8,7 @@ $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (eve
     // reliable way to ensure the video stops playing in IE
     $("#trailer-video-container").empty();
 });
+
 // Start playing the video whenever the trailer modal is opened
 $(document).on('click', '.movie-tile', function (event) {
     var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
@@ -19,6 +20,7 @@ $(document).on('click', '.movie-tile', function (event) {
       'frameborder': 0
     }));
 });
+
 // Animate in the movies when the page loads
 $(document).ready(function () {
   $('.movie-tile').hide().first().show("fast", function showNext() {
@@ -67,9 +69,8 @@ body {
 	top: 0;
 	background-color: white;
 }
-
 .footer, .push {
-    height: 155px;
+  height: 155px;
 	background-color: #EEE;
 }
 '''
@@ -93,7 +94,6 @@ main_page_head = '''
 
 main_page_content = '''
   <body>
-    <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -106,7 +106,6 @@ main_page_content = '''
       </div>
     </div>
 
-    <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -137,17 +136,14 @@ movie_tile_content = u'''
 '''
 
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
     content = ''
     for movie in movies:
-        # Extract the youtube ID from the url
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
         youtube_id_match = youtube_id_match or re.search(
             r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match else None)
 
-        # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
             movie_storyline=movie.storyline,
@@ -172,10 +168,8 @@ def open_movies_page(movies):
     # Create or overwrite the output html file
     output_file = open('index.html', 'w')
 
-    # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
+      movie_tiles=create_movie_tiles_content(movies))
 
-    # Output the html file
     output_file.write(main_page_head + rendered_content)
     output_file.close()
