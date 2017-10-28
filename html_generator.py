@@ -29,43 +29,48 @@ $(document).ready(function () {
 
 css_style = '''
 body {
-    padding-top: 80px;
+	padding-top: 80px;
 }
 #trailer .modal-dialog {
-    margin-top: 200px;
-    width: 640px;
-    height: 480px;
+	margin-top: 200px;
+	width: 640px;
+	height: 480px;
 }
 .hanging-close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    z-index: 9001;
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	z-index: 9001;
 }
 #trailer-video {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .movie-tile {
-    margin-bottom: 20px;
-    padding-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
 }
 .movie-tile:hover {
-    background-color: #EEE;
-    cursor: pointer;
+	background-color: #EEE;
+	cursor: pointer;
 }
 .scale-media {
-    padding-bottom: 56.25%;
-    position: relative;
+	padding-bottom: 56.25%;
+	position: relative;
 }
 .scale-media iframe {
-    border: none;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: white;
+	border: none;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: white;
+}
+
+.footer, .push {
+    height: 155px;
+	background-color: #EEE;
 }
 '''
 
@@ -81,7 +86,6 @@ main_page_head = '''
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <style type="text/css" media="screen"></style> -->
     <link rel="stylesheet" href="css/films.css">
     <script src="js/films.js"></script>
 </head>
@@ -115,6 +119,11 @@ main_page_content = '''
     <div class="container">
       {movie_tiles}
     </div>
+	<footer class="footer">
+		<div class="container">
+			<p class="navbar-text navbar-center">Made by <a href="https://github.com/leogregianin">Leonardo Gregianin</a> 2017</p>
+		</div>
+	</footer>
   </body>
 </html>
 '''
@@ -122,7 +131,7 @@ main_page_content = '''
 movie_tile_content = u'''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+	<h2>{movie_title}</h2>
     <h5>{movie_storyline}</h5>
 </div>
 '''
