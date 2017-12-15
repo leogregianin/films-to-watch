@@ -42,6 +42,13 @@
         "poster_image_url": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_SY1000_CR0,0,672,1000_AL_.jpg",
         "trailer_youtube_url": "https://www.youtube.com/watch?v=89Kq8SDyvfg"
       },
+	    {
+        "key": "benjamin",
+        "title": "O Curioso Caso de Benjamin Button",
+        "storyline": "Tells the story of Benjamin Button, a man who starts aging backwards with bizarre consequences.",
+        "poster_image_url": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjQ0NTY2ODY2M15BMl5BanBnXkFtZTgwMjE4MzkxMDE@._V1_.jpg",
+        "trailer_youtube_url": "https://www.youtube.com/watch?v=p8ucIL2tLLo"
+      },
       {
         "key": "cegueira",
         "title": "Blindness (Ensaio sobre a Cegueira)",
