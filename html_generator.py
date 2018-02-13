@@ -1,4 +1,4 @@
-import os
+import os, os.path
 import re
 
 # js file
@@ -165,18 +165,26 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
     
+    # create sub-dir
+    if not os.path.exists('output'):
+      os.makedirs('output')
+
     # Create or overwrite the output js file
-    js_file = open('js/films.js', 'w')
+    if not os.path.exists('output/js'):
+      os.makedirs('output/js')
+    js_file = open('output/js/films.js', 'w')
     js_file.write(js_functions)
     js_file.close()
 
     # Create or overwrite the output css file
-    css_file = open('css/films.css', 'w')
+    if not os.path.exists('output/css'):
+      os.makedirs('output/css')
+    css_file = open('output/css/films.css', 'w')
     css_file.write(css_style)
     css_file.close()
 
     # Create or overwrite the output html file
-    output_file = open('index.html', 'w')
+    output_file = open('output/index.html', 'w')
 
     rendered_content = main_page_content.format(
       movie_tiles=create_movie_tiles_content(movies))

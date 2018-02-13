@@ -34,7 +34,7 @@ def main():
             printf("Recompiling... Done!")
             
             # open webbrowser new tab
-            url = os.path.abspath('index.html')
+            url = os.path.abspath('output/index.html')
             webbrowser.open('file://' + url, new=2)
 
         before = after
